@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон продажи автомобилей</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-image: url('https://example.com/car-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: #007bff;
+            padding: 20px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .car-category {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+        }
+        .car-category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .car-category h3 {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Навигационная панель -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Premium Motors</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cars">Каталог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Обратная связь</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero секция -->
+<div class="hero text-center">
+    <h1 th:text="${message}"></h1>
+</div>
+
+<div class="container text-center mt-4">
+    <a href="/contact" class="btn btn-custom">Связаться с нами</a>
+</div>
+
+<!-- Основное содержимое -->
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2>Наши категории автомобилей</h2>
+        <p>Мы предлагаем широкий выбор автомобилей для любых нужд</p>
+    </div>
+
+    <!-- Категории автомобилей -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="car-category">
+                <img src="/crossover.jpg" alt="Кроссовер">
+                <h3>Кроссоверы</h3>
+                <p>Просторные и мощные для любых условий.</p>
+                <a href="#" class="btn btn-custom">Просмотр</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="car-category">
+                <img src="/sedan.png" alt="Седан">
+                <h3>Седаны</h3>
+                <p>Комфорт и элегантность в каждом движении.</p>
+                <a href="#" class="btn btn-custom">Просмотр</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="car-category">
+                <img src="/truck.jpg" alt="Грузовик">
+                <h3>Грузовики</h3>
+                <p>Мощные решения для работы и перевозок.</p>
+                <a href="#" class="btn btn-custom">Просмотр</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white mt-5 p-4 text-center">
+    <p>&copy; 2024 Салон продажи автомобилей. Все права защищены.</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
