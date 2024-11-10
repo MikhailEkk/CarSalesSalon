@@ -8,6 +8,16 @@
 <body>
 <div class="container mt-5">
     <h2>Список автомобилей</h2>
+
+    <!-- Форма для поиска по бренду -->
+    <form th:action="@{/cars/search}" method="get" class="mb-3">
+        <div class="input-group">
+            <input type="text" name="brend" class="form-control" placeholder="Введите бренд для поиска"
+                   th:value="${searchQuery}">
+            <button type="submit" class="btn btn-primary">Поиск</button>
+        </div>
+    </form>
+
     <table class="table">
         <thead>
         <tr>

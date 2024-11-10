@@ -20,4 +20,8 @@ public class CarService {
     public Car saveCar(Car car) {
         return carRepository.save(car);
     }
+
+    public List<Car> getCarsByBrend(String brend) {
+        return carRepository.findByBrendIgnoreCase(brend);
+    }
 }
