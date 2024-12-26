@@ -1,0 +1,63 @@
+        body {
+            padding-top: 50px;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            background-image: url('https://example.com/car-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            background: rgba(0, 123, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .car-category {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            background-color: white;
+            text-align: center;
+        }
+        .car-category img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .car-category h3 {
+            margin-top: 15px;
+        }
+        .navbar-nav {
+            justify-content: center;
+            gap: 15px;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffc107;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .username {
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.1rem;
+            color: #ffffff;
+        }

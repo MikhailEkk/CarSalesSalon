@@ -25,7 +25,12 @@ public class CarController {
 
     @GetMapping("/cars/search")
     public String getCarsByBrend(@RequestParam("brend") String brend, Model model) {
-        List<Car> cars = carService.getCarsByBrend(brend);
+        List<Car> cars;
+        if (brend == null || brend.isBlank()){
+            cars = carService.getAllCars();
+        } else {
+            cars = carService.getCarsByBrend(brend);
+        }
         model.addAttribute("cars", cars);
         model.addAttribute("searchQuery", brend);
         return "car-list";

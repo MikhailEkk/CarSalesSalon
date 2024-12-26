@@ -11,6 +11,7 @@ public class Car {
     private String brend; // Производитель
     private String model; // Модель
     private String carClass; //Класс автомобилей
+    @Column(name = "\"year\"", nullable = false)
     private int year; // Год выпуска
     private double price; // Цена автомобиля
 
